@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/React-Module-2-Practis/static/css/main.7acaea2f.css",
-    "main.js": "/React-Module-2-Practis/static/js/main.666faeeb.js",
+    "main.js": "/React-Module-2-Practis/static/js/main.9bd6f032.js",
     "index.html": "/React-Module-2-Practis/index.html",
     "main.7acaea2f.css.map": "/React-Module-2-Practis/static/css/main.7acaea2f.css.map",
-    "main.666faeeb.js.map": "/React-Module-2-Practis/static/js/main.666faeeb.js.map"
+    "main.9bd6f032.js.map": "/React-Module-2-Practis/static/js/main.9bd6f032.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.666faeeb.js"
+    "static/js/main.9bd6f032.js"
   ]
 }
