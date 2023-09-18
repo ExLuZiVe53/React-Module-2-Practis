@@ -6,7 +6,7 @@ export const App = () => {
     <>
       <h1>Стан компонента</h1>
 
-      <Counter initialValue={10} />
+      <Counter initialValue={0} />
     </>
   );
 };
