@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Module-2-Practis/static/css/main.7acaea2f.css",
+    "main.js": "/React-Module-2-Practis/static/js/main.666faeeb.js",
+    "index.html": "/React-Module-2-Practis/index.html",
+    "main.7acaea2f.css.map": "/React-Module-2-Practis/static/css/main.7acaea2f.css.map",
+    "main.666faeeb.js.map": "/React-Module-2-Practis/static/js/main.666faeeb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.666faeeb.js"
+  ]
+}
