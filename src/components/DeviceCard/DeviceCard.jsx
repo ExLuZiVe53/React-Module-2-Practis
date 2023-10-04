@@ -1,3 +1,4 @@
+import css from './DeviceCard.module.css';
 // створюємо розмітку
 // приймаємо пропси у вигляді об'єкту для рендеру розмітки у DeviceCard
 const DeviceCard = ({
@@ -10,7 +11,7 @@ const DeviceCard = ({
   onDeleteDevice,
 }) => {
   return (
-    <li>
+    <li className={css.item}>
       {/* за допомогою {вставляємо наші пропси} */}
       <img src={coverImage} width={300} alt={title} />
       <h3>{title}</h3>

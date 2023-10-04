@@ -1,9 +1,10 @@
 import React from 'react';
 import DeviceCard from 'components/DeviceCard/DeviceCard';
+import css from './DeviceList.module.css';
 
 const DeviceList = ({ devices, onDeleteDevice }) => {
   return (
-    <ul>
+    <ul className={css.cardList}>
       {devices.map(({ id, title, brand, price, type, coverImage }) => (
         // або деструктуризуємо поля які потрібно з device
         <DeviceCard
