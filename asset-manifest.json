@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-Module-2-Practis/static/css/main.7acaea2f.css",
-    "main.js": "/React-Module-2-Practis/static/js/main.b73e2694.js",
+    "main.js": "/React-Module-2-Practis/static/js/main.6468b150.js",
     "static/media/devicePhoto.jpg": "/React-Module-2-Practis/static/media/devicePhoto.cea396f700a734b40928.jpg",
     "index.html": "/React-Module-2-Practis/index.html",
     "main.7acaea2f.css.map": "/React-Module-2-Practis/static/css/main.7acaea2f.css.map",
-    "main.b73e2694.js.map": "/React-Module-2-Practis/static/js/main.b73e2694.js.map"
+    "main.6468b150.js.map": "/React-Module-2-Practis/static/js/main.6468b150.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.b73e2694.js"
+    "static/js/main.6468b150.js"
   ]
 }
