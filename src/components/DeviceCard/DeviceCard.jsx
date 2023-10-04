@@ -10,7 +10,7 @@ const DeviceCard = ({
   onDeleteDevice,
 }) => {
   return (
-    <div>
+    <li>
       {/* за допомогою {вставляємо наші пропси} */}
       <img src={coverImage} width={300} alt={title} />
       <h3>{title}</h3>
@@ -21,7 +21,7 @@ const DeviceCard = ({
       <button type="button" onClick={() => onDeleteDevice(id)}>
         Delete
       </button>
-    </div>
+    </li>
   );
 };
 

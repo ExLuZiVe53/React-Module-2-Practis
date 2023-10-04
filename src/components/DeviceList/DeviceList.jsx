@@ -3,7 +3,7 @@ import DeviceCard from 'components/DeviceCard/DeviceCard';
 
 const DeviceList = ({ devices, onDeleteDevice }) => {
   return (
-    <div>
+    <ul>
       {devices.map(({ id, title, brand, price, type, coverImage }) => (
         // або деструктуризуємо поля які потрібно з device
         <DeviceCard
@@ -20,7 +20,7 @@ const DeviceList = ({ devices, onDeleteDevice }) => {
           onDeleteDevice={onDeleteDevice}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 
