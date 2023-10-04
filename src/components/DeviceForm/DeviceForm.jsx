@@ -21,7 +21,21 @@ export default class DeviceForm extends Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-    console.log(event);
+    const formData = {
+      title: this.state.title,
+      brand: this.state.brand,
+      price: this.state.price,
+      type: this.state.type,
+    };
+    // прокидуємо наш пропс з класового компоненту в метод
+    this.props.onAddDevice(formData);
+    // reset form, скидуємо значення в state до початкового
+    this.setState({
+      title: '',
+      brand: '',
+      price: '',
+      type: '',
+    });
   };
 
   render() {

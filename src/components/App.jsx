@@ -102,6 +102,7 @@ export class App extends Component {
   // створюємо стейт стану
   state = {
     devices: devices,
+    filter: '',
   };
 
   onDeleteDevice = id => {
@@ -109,15 +110,48 @@ export class App extends Component {
       devices: this.state.devices.filter(device => device.id !== id),
     });
   };
+
+  onAddDevice = data => {
+    console.log(data);
+    //  title: 'Beadphones',brand: 'Sony',price: '149.99',type: 'Audio' використовуємо розпилення ...data бо у нас назви полів яку додаємо немає у формі
+    const newDevice = {
+      ...data,
+      coverImage: imgDevice,
+      id: new Date().getMilliseconds(),
+    };
+    // push в React повертає довжину масиву
+    this.setState({ devices: [...this.state.devices, newDevice] });
+  };
+
+  onChangeInput = event => {
+    this.setState({ filter: event.target.value });
+    console.log(event.target.value);
+  };
+
   render() {
+    const filteredDevices = this.state.devices.filter(device =>
+      device.title
+        .toLowerCase()
+        .includes(this.state.filter.toLowerCase().trim())
+    );
     return (
       <div>
         <h1>Device store</h1>
+        {/* за допомогоюу пропсів пропидаємо метод в компонент */}
+        <DeviceForm onAddDevice={this.onAddDevice} />
+        <label>
+          <p>Search by title</p>
+          <input
+            type="text"
+            placeholder="Enter search title"
+            value={this.state.filter}
+            onChange={this.onChangeInput}
+          />
+        </label>
         {/* за допомогою {} у js пишемо jsx-файли*/}
         {/*Після імпорту передаємо пропси */}
-        <DeviceForm />
         <DeviceList
-          devices={this.state.devices}
+          devices={filteredDevices}
           onDeleteDevice={this.onDeleteDevice}
         />
       </div>
