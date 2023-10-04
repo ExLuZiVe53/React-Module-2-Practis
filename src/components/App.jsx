@@ -1,7 +1,7 @@
 import imgDevice from 'assets/images/devicePhoto.jpg';
 
-import DeviceList from './DeviceList/DeviceList';
 import { Component } from 'react';
+import DeviceList from './DeviceList/DeviceList';
 
 const devices = [
   {
