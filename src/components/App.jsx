@@ -1,4 +1,7 @@
-import React from 'react';
+import imgDevice from 'assets/images/devicePhoto.jpg';
+
+import DeviceList from './DeviceList/DeviceList';
+import { Component } from 'react';
 
 const devices = [
   {
@@ -7,7 +10,7 @@ const devices = [
     brand: 'Apple',
     price: '999.99',
     type: 'Mobile',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 2,
@@ -15,7 +18,7 @@ const devices = [
     brand: 'Dell',
     price: '1299.99',
     type: 'Computer',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 3,
@@ -23,7 +26,7 @@ const devices = [
     brand: 'Samsung',
     price: '249.99',
     type: 'Wearable',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 4,
@@ -31,7 +34,7 @@ const devices = [
     brand: 'Amazon',
     price: '199.99',
     type: 'Mobile',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 5,
@@ -39,7 +42,7 @@ const devices = [
     brand: 'Sony',
     price: '799.99',
     type: 'Elektronics',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 6,
@@ -47,7 +50,7 @@ const devices = [
     brand: 'Microsoft',
     price: '399.99',
     type: 'Gaming',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 7,
@@ -55,7 +58,7 @@ const devices = [
     brand: 'Canon',
     price: '599.99',
     type: 'Photography',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 8,
@@ -63,7 +66,7 @@ const devices = [
     brand: 'Sony',
     price: '149.99',
     type: 'Audio',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 9,
@@ -71,7 +74,7 @@ const devices = [
     brand: 'Linksys',
     price: '79.99',
     type: 'Beatworking',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
   {
     id: 10,
@@ -79,14 +82,43 @@ const devices = [
     brand: 'Fitbit',
     price: '79.99',
     type: 'Wearable',
-    coverImage: 'laptop_image.jpg',
+    coverImage: imgDevice,
   },
 ];
 
-export const App = () => {
-  return (
-    <div>
-      <h1>Device store</h1>
-    </div>
-  );
-};
+// export const App = () => {
+//   return (
+//     <div>
+//       <h1>Device store</h1>
+//       {/* за допомогою {} у js пишемо jsx-файли */}
+//       {/* Після імпорту передаємо пропси */}
+//       <DeviceList devices={devices} />
+//     </div>
+//   );
+// };
+
+export class App extends Component {
+  // створюємо стейт стану
+  state = {
+    devices: devices,
+  };
+
+  onDeleteDevice = id => {
+    this.setState({
+      devices: this.state.devices.filter(device => device.id !== id),
+    });
+  };
+  render() {
+    return (
+      <div>
+        <h1>Device store</h1>
+        {/* за допомогою {} у js пишемо jsx-файли*/}
+        {/*Після імпорту передаємо пропси */}
+        <DeviceList
+          devices={this.state.devices}
+          onDeleteDevice={this.onDeleteDevice}
+        />
+      </div>
+    );
+  }
+}
