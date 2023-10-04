@@ -112,7 +112,11 @@ export class App extends Component {
   };
 
   onAddDevice = data => {
-    console.log(data);
+    // Перевіримо чи існує такий об'єкт в нашому масиві
+    if (this.state.devices.some(({ title }) => data.title === title)) {
+      return alert('This device have already been added');
+    }
+
     //  title: 'Beadphones',brand: 'Sony',price: '149.99',type: 'Audio' використовуємо розпилення ...data бо у нас назви полів яку додаємо немає у формі
     const newDevice = {
       ...data,
@@ -125,7 +129,6 @@ export class App extends Component {
 
   onChangeInput = event => {
     this.setState({ filter: event.target.value });
-    console.log(event.target.value);
   };
 
   render() {
