@@ -2,6 +2,7 @@ import imgDevice from 'assets/images/devicePhoto.jpg';
 
 import { Component } from 'react';
 import DeviceList from './DeviceList/DeviceList';
+import DeviceForm from './DeviceForm/DeviceForm';
 
 const devices = [
   {
@@ -114,6 +115,7 @@ export class App extends Component {
         <h1>Device store</h1>
         {/* за допомогою {} у js пишемо jsx-файли*/}
         {/*Після імпорту передаємо пропси */}
+        <DeviceForm />
         <DeviceList
           devices={this.state.devices}
           onDeleteDevice={this.onDeleteDevice}
