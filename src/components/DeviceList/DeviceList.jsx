@@ -2,19 +2,6 @@ import React from 'react';
 import DeviceCard from 'components/DeviceCard/DeviceCard';
 
 const DeviceList = ({ devices, onDeleteDevice }) => {
-  {
-    /* {devices.map(device => (
-        <DeviceCard
-          Передаємо пропсами дані з компоненту DeviceCard
-          id={device.id}
-          title={device.title}
-          brand={device.brand}
-          price={device.price}
-          type={device.type}
-          coverImage={device.coverImage}
-        />
-      ))} */
-  }
   return (
     <div>
       {devices.map(({ id, title, brand, price, type, coverImage }) => (
